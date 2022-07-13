@@ -1,0 +1,26 @@
+#%RAML 1.0
+version: V1
+baseUri: api/sys/osvc/v1
+title: osvc system API to manage resources in Oracle service Cloud
+description: Osvc System API managing Organizations
+protocols:
+  - HTTPS
+  - HTTP
+mediaType: 
+- application/json
+
+types:
+  postOrganizationsRequest: !include /libraries/DataTypes/requests/postOrganization.raml
+  postOrganizationsResponse: !include /libraries/DataTypes/responses/postOrganization.raml
+
+traits:
+  clientCredentials: !include /libraries/traits/clientCredentials.raml
+
+resourceTypes:
+  organizationResourceType: !include /libraries/resourceTypes/organization.raml
+
+/organizations:
+  type: organizationResourceType
+
+              
+          
