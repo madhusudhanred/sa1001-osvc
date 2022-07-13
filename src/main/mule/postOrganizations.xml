@@ -11,7 +11,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 			</http:authentication>
 		</http:request-connection>
 	</http:request-config>
-	<sub-flow name="postOrganizationsSubFlow" doc:id="e0f77b32-2cfe-4808-9a30-cb737b345338" >
+	<sub-flow name="postOrganizationsSubFlow" doc:id="e0f77b32-2cfe-4808-9a30-cb737b345338" doc:description="This flow is used to create organization record by calling osvc endpoint by usig basic auth">
 		<logger level="INFO" doc:name="info: Flow start Logger" doc:id="849ff3ee-d1aa-4c6a-b09f-f93d5d192cd4" message="postOrganizationsSubFlow started #[payload]"/>
 		<http:request method="POST" doc:name="osvc ext Request for organization creation" doc:id="79342c41-0363-4ee6-8f5b-7d05376ae7a3" config-ref="HTTP_Request_configuration" path="/organization"/>
 		<logger level="INFO" doc:name="info: Flow end Logger" doc:id="05a2fdff-85a9-46d5-923e-43a7d4ef3406" message="postOrganizationsSubFlow ended"/>

@@ -123,7 +123,7 @@ output application/json
             </on-error-propagate>
         </error-handler>
     </flow>
-    <flow name="post:\organizations:application\json:sa1001-osvc-config">
+    <flow name="post:\organizations:application\json:sa1001-osvc-config" doc:description="calling organization implementation flow">
 		<flow-ref doc:name="Flow Reference" doc:id="5ceae490-b1b8-4764-9632-04da8884b12e" name="postOrganizationsSubFlow"/>
     </flow>
 </mule>
